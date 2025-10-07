@@ -8,6 +8,7 @@
             color: #374151;
             /* cinza escuro */
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
         :root{
             --cor-primaria: #ff0000;
@@ -74,6 +75,16 @@
             background-color: var(--cor-primaria);
             /* vermelho escuro */
         }
+   .menu-toggle {
+    display: none; 
+    font-size: 2rem;
+    color: var(--text-color); /* Use a cor do seu texto */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
 
         /* --- Seção Hero (Principal) --- */
         .hero {
@@ -180,7 +191,7 @@
         /* --- Seção de Contato --- */
         .contact-section {
             padding: 5rem 2rem;
-            background-color: var(--cor-primaria-leve);
+    
             /* cinza claro */
         }
 
@@ -192,12 +203,13 @@
         .contact-header {
             text-align: center;
             margin-bottom: 2.5rem;
+            color: var(--texto-cor);
         }
 
         .contact-header h2 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #DC2626;
+           color: var(--texto-cor);
         }
 
         .contact-header p {
@@ -274,36 +286,64 @@
 
 
         /* --- Responsividade para Telas Menores --- */
-        @media (max-width: 900px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-                padding: 6rem 2rem 4rem 2rem;
-            }
+@media (max-width: 900px) {
+    
+    /* --- AJUSTES DA NAVEGAÇÃO MOBILE --- */
 
-            .hero-content {
-                order: 2; /* Coloca o texto depois do vídeo em telas pequenas */
-            }
+    /* 1. Escondemos os links por padrão em telas menores */
+    .nav-links {
+        display: none; /* ESSENCIAL: esconde o menu normal */
 
-            .hero-video {
-                order: 1;
-            }
+        /* Estilos de como o menu deve parecer QUANDO ABERTO */
+        position: absolute;
+        top: 70px; /* Ajuste conforme a altura do seu header */
+        right: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column; /* Organiza os links verticalmente */
+        align-items: center;
+        padding: 2rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    /* 2. A classe .active, que será adicionada via JavaScript, MOSTRA o menu */
+    .nav-links.active {
+        display: flex; /* SOBRESCREVE o 'display: none' e faz o menu aparecer */
+    }
 
-            .nav-links {
-                display: none;
-                /* Esconde os links no desktop para simplificar */
-            }
+    /* 3. Mostramos o botão hambúrguer apenas em telas menores */
+    .menu-toggle {
+        display: block; /* O botão agora é visível */
+    }
 
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+    /* --- DEMAIS AJUSTES RESPONSIVOS (O seu código original estava correto aqui) --- */
 
-            .hero p {
-                font-size: 1rem;
-            }
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 6rem 2rem 4rem 2rem;
+    }
 
-            .about-section {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        }
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-video {
+        order: 1;
+        margin-bottom: 2rem; /* Adiciona espaço entre o vídeo e o texto */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

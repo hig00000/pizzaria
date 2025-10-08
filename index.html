@@ -1,122 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Pizzaria Higor</title>
-        <!-- Incluindo uma fonte do Google Fonts para um visual mais agradável -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-            rel="stylesheet" />
-        <link rel="stylesheet" href="index.css" />
-    </head>
 
-    <body>
-        <nav class="nav-bar">
-            <a href="#home" class="logo">Pizzaria Higor</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#" target="_blank"
-                        class="nav-button">Cardápio</a></li>
-            </ul>
-            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzaria Higor</title>
+  
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
 
-        <main id="home" class="hero">
-            <div class="hero-content">
-                <h1>A arte da pizza, direto do forno para você.</h1>
-                <p>
-                    Descubra o sabor autêntico de massas frescas, ingredientes
-                    selecionados e receitas que atravessam gerações. A cada
-                    fatia, uma
-                    nova paixão.
-                </p>
-                <a href="#" class="hero-button">Ver Cardápio</a>
-            </div>
-            <div class="hero-image">
-                <img
-                    src="./img/pizza-fundo.jpg"
-                    alt="Pizza deliciosa saindo do forno" />
-            </div>
-            <div class="hero-video">
-                <video
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    src="./video/pizzaria.mp4"></video>
-            </div>
-        </main>
+<body>
 
-        <section id="sobre" class="about-section">
-            <div class="about-content">
-                <h2>Sobre Nós</h2>
-                <p>
-                    Estamos no ramo da gastronomia há 20 anos, com uma paixão
-                    por criar
-                    sabores inesquecíveis. Nossa missão é simples: usar sempre
-                    os melhores
-                    e mais frescos ingredientes para levar até você uma
-                    experiência única
-                    a cada fatia.
-                </p>
-                <p>
-                    Da massa de fermentação lenta ao molho de tomate artesanal,
-                    cada
-                    detalhe é pensado para garantir a qualidade que nossos
-                    clientes
-                    merecem.
-                </p>
-            </div>
-            <div class="about-image">
-                <img
-                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1981&auto=format&fit=crop"
-                    alt="Pizza deliciosa em um prato" />
-            </div>
-        </section>
+  <!-- ====== NAVBAR ====== -->
+  <nav class="nav-bar">
+    <a href="#home" class="logo">🍕 Pizzaria Higor</a>
 
-        <section id="contato" class="contact-section">
-            <div class="contact-container">
-                <div class="contact-header">
-                    <h2>Entre em Contato</h2>
-                    <p>Tem alguma dúvida ou sugestão? Adoraríamos ouvir
-                        você!</p>
-                </div>
-                <form class="contact-form" action="#" method="POST">
-                    <label for="name">Seu nome</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Digite seu nome" />
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-                    <label for="email">Seu email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Digite seu email" />
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="./cardapio.html" target="_blank" class="nav-button">Cardápio</a></li>
+    </ul>
+  </nav>
 
-                    <label for="message">Mensagem</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="4"
-                        placeholder="Digite sua mensagem"></textarea>
+  <!-- ====== HERO ====== -->
+  <main id="home" class="hero">
+    <div class="hero-content">
+      <h1>A arte da pizza, direto do forno para você.</h1>
+      <p>Descubra o sabor autêntico de massas frescas, ingredientes selecionados e receitas que atravessam gerações. A cada fatia, uma nova paixão.</p>
+      <a href="./cardapio.html" class="hero-button">Ver Cardápio</a>
+    </div>
+    <div class="hero-image">
+      <img src="./img/pizza-fundo.jpg" alt="Pizza deliciosa saindo do forno">
+    </div>
 
-                    <button type="submit">Enviar Mensagem</button>
-                </form>
-            </div>
-        </section>
+    <div class="hero-video">
+      <video autoplay loop muted playsinline src="./video/pizzaria.mp4"></video>
+    </div>
+  </main>
 
-        <footer>
-            <p>2025 Pizzaria Higor</p>
-            <p class="footer-credit">Feito com ❤️ e muito queijo.</p>
-        </footer>
-        <script src="index.js"></script>
-    </body>
+  <!-- ====== SOBRE ====== -->
+  <section id="sobre" class="about-section">
+    <div class="about-content">
+      <h2>Sobre Nós</h2>
+      <p>Estamos no ramo da gastronomia há 20 anos, com uma paixão por criar sabores inesquecíveis. Nossa missão é simples: usar sempre os melhores e mais frescos ingredientes para levar até você uma experiência única a cada fatia.</p>
+      <p>Da massa de fermentação lenta ao molho artesanal, cada detalhe é pensado para garantir a qualidade que nossos clientes merecem.</p>
+    </div>
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1981&auto=format&fit=crop" alt="Pizza deliciosa em um prato">
+    </div>
+  </section>
+
+  <!-- ====== CONTATO ====== -->
+  <section id="contato" class="contact-section">
+    <div class="contact-header">
+      <h2>Entre em Contato</h2>
+      <p>Tem alguma dúvida ou sugestão? Adoraríamos ouvir você!</p>
+    </div>
+
+    <form class="contact-form" action="#" method="POST">
+      <label for="name">Seu nome</label>
+      <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+      <label for="email">Seu email</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" rows="4" placeholder="Digite sua mensagem" required></textarea>
+
+      <button type="submit" class="form-button">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>&copy; 2025 Pizzaria Higor</p>
+    <p class="footer-credit">Feito com ❤️ e muito queijo.</p>
+  </footer>
+
+  <!-- ====== SCRIPT ====== -->
+  <script src="menu.js"></script>
+</body>
 </html>

@@ -8,6 +8,7 @@
             color: #374151;
             /* cinza escuro */
             scroll-behavior: smooth;
+            
             overflow-x: hidden;
         }
         :root{
